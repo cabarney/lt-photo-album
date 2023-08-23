@@ -1,0 +1,21 @@
+{
+	"name": "Node.js & TypeScript",
+	"image": "mcr.microsoft.com/devcontainers/typescript-node:1-20-bullseye",
+	"features": {
+		"ghcr.io/devcontainers-contrib/features/angular-cli:2": {},
+		"ghcr.io/devcontainers-contrib/features/snyk-cli:1": {}
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"Angular.ng-template"
+			]
+		}
+	},
+	"postCreateCommand": "npm i"
+	// "postCreateCommand": "sudo chown node node_modules & npm i",
+	// The mount makes building and startup WAY faster
+	// "mounts": [
+	// 	"source=${localWorkspaceFolderBasename}-node_modules,target=${containerWorkspaceFolder}/node_modules,type=volume"
+	// ]
+ }
