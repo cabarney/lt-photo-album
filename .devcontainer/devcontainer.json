@@ -8,14 +8,10 @@
 	"customizations": {
 		"vscode": {
 			"extensions": [
-				"Angular.ng-template"
+				"Angular.ng-template",
+				"streetsidesoftware.code-spell-checker"
 			]
 		}
 	},
 	"postCreateCommand": "npm i"
-	// "postCreateCommand": "sudo chown node node_modules & npm i",
-	// The mount makes building and startup WAY faster
-	// "mounts": [
-	// 	"source=${localWorkspaceFolderBasename}-node_modules,target=${containerWorkspaceFolder}/node_modules,type=volume"
-	// ]
  }

@@ -1,5 +1,9 @@
 # PhotoAlbum
 
+Docker, VS Code, Dev Containers extension
+Remote Menu -> Clone Repository in Container Volume
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.0.
 
 ## Development server
