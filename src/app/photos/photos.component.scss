@@ -1,0 +1,27 @@
+h2 {
+  margin-left: 2rem;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 2rem;
+
+  .photo-card {
+    margin-bottom: 1rem;
+    max-width: calc(25% - 1rem);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .gallery .photo-card {
+    max-width: calc(50% - 1rem);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .gallery .photo-card {
+    max-width: 100%;
+  }
+}

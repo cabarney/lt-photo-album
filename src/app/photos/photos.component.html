@@ -1,0 +1,21 @@
+<h2>My Photos</h2>
+
+<div>
+  <mat-paginator
+    (page)="handlePageEvent($event)"
+    [pageSize]="pageSize"
+    [pageIndex]="pageIndex$ | async"
+    [length]="gallerySize"
+    [hidePageSize]="true"
+    [showFirstLastButtons]="true"
+  ></mat-paginator>
+
+  <div class="gallery">
+    <mat-card class="photo-card" *ngFor="let photo of pagedPhotos$ | async">
+      <img mat-card-image [src]="photo.url" [alt]="photo.title">
+      <mat-card-content>
+        <p>{{ photo.title }}</p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
