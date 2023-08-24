@@ -1,31 +1,22 @@
-# PhotoAlbum
+# Technical Showcase: Photo Album
 
-Docker, VS Code, Dev Containers extension
-Remote Menu -> Clone Repository in Container Volume
+You may notice a ".devcontainer" folder in this repo. Rejoice! This means that replicating the same environment I used when developing this is on your machine is just mere moments away.
+
+**Here's what you need to do to get up and running:**
+
+- Make sure you have Docker installed and running on your machine, and add the "Dev Containers" extension to VS Code.
+- In VS Code, run the command "Dev Containers: Clone Repository in Container Volume..." You can do so by opening the command pallette and search for the command, or click the "Remote menu" in the lower-left corner of VS Code and you should see the "Clone Repository in Container Volume..." command appear
+When prompted for the repository url, paste this repo's url: https://github.com/cabarney/lt-photo-album.git
+- A docker image will be created that contains everything you need. It will:
+  1) clone the source
+  2) install the Angular CLI
+  3) install a headless Chrome browser for use with running the tests
+  4) install all needed npm packages
+  5) configure VS code with the extensions and settings needed for working with the code efficiently
+- When the post-start script has finished running (it may take a minute or two depending on your network speed), you should be able to open a terminal prompt within VS Code and run `npm run start` to launch the site, or `npm run test` to run the tests.
+- When serving the site, a port will be forwarded automatically from the dev container running in Docker to your local machine, so you'll be able to visit the site on your local machine at http://localhost:4200/
 
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.0.
+[Learn more about DevContainers](https://code.visualstudio.com/docs/devcontainers/containers)
 
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+You may still be able to launch the site without using dev containers, but this is assuming that you have your local machine configured similarly to what was used to develop this in the first place. Run `npm install` followed by `npm run start` to start the site locally.

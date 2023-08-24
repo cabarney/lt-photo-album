@@ -75,7 +75,20 @@ If a non-in-memory cache is needed, Reddis or something similar could also be st
 ## About the implemented solution...
 So, with all that said, since I'm not able to dig deeper into the requirements for additional clarity, I'm going to apply the YAGNI principal here and do the minimum to satisfy the requirements as written. Well, *almost* as written. I'm adding a couple extra pieces of flair:
 
-- Pagination
+- Pagination (albeit client-side pagination which is definitely not a best practice)
 - A out-of-the box UI library to make things look a little better (this would certainly be a placeholder until UX provides us with an approved design)
 - Dev Containers - it's the new hotness. The end of the "Works on my machine" days... Dev Containers allow you to describe a development environment with code and store it with the code itself. This allows anyone with VS Code and Docker to check out the repo and have an environment setup identical to the one all the other engineers are using. This includes CLI tools, dependencies, VS Code extensions and configuration, etc. Start the dev container and you're ready to go.
+
+### What's missing
+I time-boxed this exercise and spent too much time on this document. :) As a result, there are some things I wanted to include but couldn't quite get to:
+
+- Error handling. Yeah, I know. Super important but there ultimately wasn't time to fit it in to this crazy MVP prototype
+- The album filter (to be fair, the requirements did say it was optional...)
+- Ability to change the page size for pagination
+- Ability to view as image cards (what's implemented) and alternatively a list view which would use the thumbnail image
+- Sorting and filtering y title within the list view
+- Some tweaks to the ESLint rules and pre-commit guards to enforce code quality before being able to commit and push
+- Snyk vulnerability scanning
 - Cypress e2e tests
+
+The assignment encouraged creativity - I hope I've shown a little of that by approaching this from the point of view of an architect who has just been handed a brief and incomplete set of requirements. If I were to really unleash my creativity on the app itself, I'd be coding for days implementing all the what-if scenarios mentioned above.
